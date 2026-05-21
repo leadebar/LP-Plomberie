@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #0e1746;
+  --navy-deep: #060a26;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  @apply bg-white text-ink antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Sélection de texte */
+::selection {
+  background: rgba(14, 23, 70, 0.9);
+  color: #fff;
+}
+
+/* Barre de défilement discrète */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(14, 23, 70, 0.25);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(14, 23, 70, 0.4);
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-navy-100 bg-navy-50/60 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-navy-700;
+  }
+
+  .section-title {
+    @apply font-display text-3xl font-semibold leading-tight text-navy-900 sm:text-4xl lg:text-[2.75rem];
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-card;
+  }
+
+  /* Halo de fond animé pour les sections sombres */
+  .glow-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      60% 60% at 50% 0%,
+      rgba(79, 95, 161, 0.35) 0%,
+      transparent 70%
+    );
+    pointer-events: none;
+  }
+}
+
+/* Respect des préférences d'accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

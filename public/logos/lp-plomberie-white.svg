@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 280" fill="none" role="img" aria-label="LP Plomberie">
+  <g stroke="#ffffff" stroke-width="8" stroke-linecap="square" fill="none">
+    <!-- L -->
+    <path d="M70 40 V196 H120" />
+    <!-- P stem (long descender) -->
+    <path d="M132 40 V236" />
+    <!-- P bowl -->
+    <path d="M132 40 H172 a46 46 0 0 1 0 92 H132" />
+    <!-- P crossbar foot -->
+    <path d="M132 196 H188" />
+  </g>
+  <text x="130" y="270" text-anchor="middle" fill="#ffffff"
+        font-family="Inter, Arial, sans-serif" font-size="26" letter-spacing="9" font-weight="500">PLOMBERIE</text>
+</svg>
