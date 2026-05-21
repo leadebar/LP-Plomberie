@@ -7,7 +7,6 @@ import {
   Search,
   Flame,
   Waves,
-  Bath,
   Network,
   Accessibility,
 } from "lucide-react";
