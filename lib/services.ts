@@ -7,7 +7,7 @@ import {
   Search,
   Flame,
   Waves,
-  Toilet,
+  Bath,
   Network,
   Accessibility,
 } from "lucide-react";
@@ -55,7 +55,7 @@ export const services: Service[] = [
     short: "WC bouché ? On rétablit tout vite",
     description:
       "Intervention propre et rapide pour déboucher vos toilettes, avec vérification de l'évacuation pour éviter la récidive.",
-    icon: Toilet,
+    icon: Bath,
   },
   {
     slug: "chauffe-eau",
