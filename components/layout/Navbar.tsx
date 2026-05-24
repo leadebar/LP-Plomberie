@@ -25,7 +25,7 @@ export default function Navbar() {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
-    };
+    };art
   }, [open]);
 
   return (
@@ -52,7 +52,7 @@ export default function Navbar() {
               LP Plomberie
             </span>
             <span className="text-[11px] font-medium uppercase tracking-[0.2em] text-navy-500">
-              Artisan plombier · 06
+              Plombier · Cagnes-sur-Mer
             </span>
           </span>
         </Link>
