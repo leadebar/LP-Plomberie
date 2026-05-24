@@ -14,7 +14,11 @@ export default function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           {/* Marque */}
           <div>
-            <Logo variant="white" withWordmark={false} className="h-12 w-auto" />
+            <img
+              src="/logos/logo-blanc-rond.svg"
+              alt="LP Plomberie"
+              className="h-12 w-auto"
+            />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-navy-200/80">
               Plombier à Cagnes-sur-Mer, au service des particuliers et
               professionnels dans tout le 06. Dépannage rapide, travail soigné,
