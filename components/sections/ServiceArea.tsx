@@ -13,6 +13,7 @@ const cities = [
   "Cagnes-sur-Mer",
   "Cannes",
   "La Colle-sur-Loup",
+  "Le Rouret",
   "Mougins",
   "Nice",
   "Opio",
@@ -30,7 +31,7 @@ export default function ServiceArea() {
             <SectionHeading
               align="left"
               eyebrow="Zone d'intervention"
-              title="Un plombier proche de chez vous dans les Alpes-Maritimes"
+              title="Un plombier réactif proche de chez vous"
               subtitle="Basé à Cagnes-sur-Mer, j'interviens rapidement dans toutes les communes du 06."
             />
 
