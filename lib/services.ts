@@ -33,44 +33,44 @@ export const services: Service[] = [
   {
     slug: "recherche-de-fuite",
     title: "Recherche de fuite",
-    short: "Détection précise, sans tout casser",
+    short: "Détection précise sans casse",
     description:
-      "Localisation de fuite par méthode non destructive. On identifie l'origine exacte avant toute réparation pour limiter les dégâts et les coûts.",
+      "Recherche de fuite non destructive sur canalisation, mur, sol ou réseau sanitaire.",
     icon: Search,
     featured: true,
   },
   {
     slug: "debouchage-canalisation",
     title: "Débouchage de canalisation",
-    short: "Évacuations qui coulent à nouveau",
+    short: "Canalisations bouchées ?",
     description:
-      "Débouchage des canalisations, éviers et siphons. Matériel professionnel pour un résultat durable, sans abîmer vos installations.",
+      "Débouchage d’évier, douche, baignoire, WC et évacuations avec matériel professionnel.",
     icon: Waves,
     featured: true,
   },
   {
     slug: "debouchage-wc",
-    title: "Débouchage WC",
-    short: "WC bouché ? On rétablit tout vite",
+    title: "WC & chasse d’eau",
+    short: "Réparation et débouchage",
     description:
-      "Intervention propre et rapide pour déboucher vos toilettes, avec vérification de l'évacuation pour éviter la récidive.",
+      "Réparation de chasse d’eau, fuite WC, mécanisme défectueux et toilettes bouchées.",
     icon: Bath,
   },
   {
     slug: "chauffe-eau",
-    title: "Installation de chauffe-eau",
-    short: "Eau chaude fiable et économe",
+    title: "Chauffe-eau",
+    short: "Installation & dépannage",
     description:
-      "Fourniture, installation et remplacement de chauffe-eau (électrique, thermodynamique). Conseil sur le modèle le plus adapté à votre foyer.",
+      "Remplacement, dépannage et installation de chauffe-eau électriques et cumulus.",
     icon: Flame,
     featured: true,
   },
   {
     slug: "renovation-salle-de-bain",
-    title: "Rénovation complète de salle de bain",
-    short: "Une salle de bain neuve, clé en main",
+    title: "Installation sanitaire",
+    short: "Pose d’équipements sanitaires",
     description:
-      "De la dépose à la pose : nous repensons et rénovons votre salle de bain de A à Z, avec un travail soigné et des finitions premium.",
+      "Installation de lavabo, évier, douche, WC, robinetterie et raccordements.",
     icon: Bath,
     featured: true,
   },
