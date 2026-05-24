@@ -51,7 +51,7 @@ export default function Footer() {
             </h3>
             <ul className="mt-5 space-y-2.5 text-sm">
               <li>
-                <Link href="/#pourquoi" className="text-navy-200/80 transition-colors hover:text-white">Pourquoi nous</Link>
+                <Link href="/#pourquoi" className="text-navy-200/80 transition-colors hover:text-white">Pourquoi LP Plomberie</Link>
               </li>
               <li>
                 <Link href="/#realisations" className="text-navy-200/80 transition-colors hover:text-white">Réalisations</Link>
@@ -115,8 +115,7 @@ export default function Footer() {
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-navy-300 sm:flex-row">
           <p>© {year} {siteConfig.name}. Tous droits réservés.</p>
           <p>
-            Plombier à Cagnes-sur-Mer · Nice · Antibes · Saint-Laurent-du-Var ·
-            Villeneuve-Loubet · Alpes-Maritimes (06)
+            Plombier à Cagnes-sur-Mer · Nice · Antibes · Saint-Laurent-du-Var · Villeneuve-Loubet · Vence · La Colle-sur-Loup · Biot · Valbonne · Cannes · Alpes-Maritimes (06)
           </p>
         </div>
       </div>
