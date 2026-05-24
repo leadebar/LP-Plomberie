@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { Phone, Menu, X } from "lucide-react";
-import Logo from "@/components/ui/Logo";
 import Button from "@/components/ui/Button";
 import { navLinks, siteConfig, telHref } from "@/lib/site";
 import { cn } from "@/lib/cn";
@@ -42,18 +41,20 @@ export default function Navbar() {
     >
       <nav className="container-x flex h-[72px] items-center justify-between">
         <Link
-          href="/logo/logo-long.svg"
-          className="flex items-center gap-3"
+          href="/"
+          className="flex items-center"
           aria-label="LP Plomberie - accueil"
         >
-          <Logo variant="navy" withWordmark={false} className="h-10 w-auto" />
           <img
-          src="/logos/logo-long.svg"
-          alt="LP Plomberie"
-          className="h-20 w-auto"
-        />
+            src={
+              scrolled
+                ? "/logos/logo-bleu-long-off.svg"
+                : "/logos/logo-blanc-long-off.svg"
+            }
+            alt="LP Plomberie"
+            className="h-8 w-auto object-contain transition-all duration-300"
+          />
         </Link>
-
         <ul className="hidden items-center gap-1 lg:flex">
           {navLinks.map((link) => (
             <li key={link.href}>
