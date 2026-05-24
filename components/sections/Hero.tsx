@@ -49,9 +49,8 @@ export default function Hero() {
               variants={fadeUp}
               className="mt-6 max-w-xl text-base leading-relaxed text-navy-100/85 sm:text-lg"
             >
-              Dépannage urgent, recherche de fuite, débouchage, chauffe-eau et
-              rénovation de salle de bain. Un artisan local qui intervient vite,
-              travaille proprement et vous accompagne en toute transparence.
+              Intervention rapide pour vos fuites d’eau, débouchages, chauffe-eau,
+              installations sanitaires et rénovations de salle de bain.
             </motion.p>
 
             <motion.div
