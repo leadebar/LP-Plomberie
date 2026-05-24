@@ -30,7 +30,7 @@ export default function Hero() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
                 </span>
-                Artisan plombier · Cagnes-sur-Mer & 06
+                Plombier · Cagnes-sur-Mer & 06
               </span>
             </motion.div>
 
@@ -38,20 +38,19 @@ export default function Hero() {
               variants={fadeUp}
               className="mt-6 font-display text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl"
             >
-              Votre plombier de confiance,{" "}
+              Votre plombier{" "}
               <span className="bg-gradient-to-r from-navy-100 to-white bg-clip-text text-transparent">
                 rapide et soigné
               </span>{" "}
-              dans le 06.
+              à Cagnes-sur-Mer
             </motion.h1>
 
             <motion.p
               variants={fadeUp}
               className="mt-6 max-w-xl text-base leading-relaxed text-navy-100/85 sm:text-lg"
             >
-              Dépannage urgent, recherche de fuite, débouchage, chauffe-eau et
-              rénovation de salle de bain. Un artisan local qui intervient vite,
-              travaille proprement et vous accompagne en toute transparence.
+              Intervention rapide pour vos fuites d’eau, débouchages, chauffe-eau,
+              installations sanitaires et rénovations de salle de bain.
             </motion.p>
 
             <motion.div
