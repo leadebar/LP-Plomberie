@@ -52,7 +52,7 @@ export default function Navbar() {
                 : "/logos/logo-blanc-long.svg"
             }
             alt="LP Plomberie"
-            className="h-12 w-auto object-contain transition-all duration-300"
+            className="h-20 w-auto object-contain transition-all duration-300"
           />
         </Link>
         <ul className="hidden items-center gap-1 lg:flex">
