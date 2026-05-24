@@ -121,7 +121,7 @@ export const testimonials: Testimonial[] = [
     text: "Salle de bain entièrement rénovée avec beaucoup de soin. Le résultat est moderne, propre et parfaitement réalisé. Délais respectés et chantier impeccable du début à la fin.",
   },
   {
-    name: "xx.",
+    name: "Léa D.",
     city: "Antibes",
     rating: 5,
     service: "Dépannage urgent",
