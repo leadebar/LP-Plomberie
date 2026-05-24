@@ -16,7 +16,7 @@ export default function Footer() {
           <div>
             <Logo variant="white" withWordmark={false} className="h-12 w-auto" />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-navy-200/80">
-              Artisan plombier à Cagnes-sur-Mer, au service des particuliers et
+              Plombier à Cagnes-sur-Mer, au service des particuliers et
               professionnels dans tout le 06. Dépannage rapide, travail soigné,
               devis gratuit.
             </p>
