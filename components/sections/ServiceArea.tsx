@@ -8,18 +8,17 @@ import { telHref } from "@/lib/site";
 import { fadeUp, stagger, revealOnScroll } from "@/lib/animations";
 
 const cities = [
-  "Cagnes-sur-Mer",
-  "Le Cros-de-Cagnes",
-  "Nice",
-  "Saint-Laurent-du-Var",
-  "Villeneuve-Loubet",
   "Antibes",
-  "Vence",
-  "La Gaude",
-  "Saint-Paul-de-Vence",
   "Biot",
-  "Cap-d'Ail",
-  "Tout le 06",
+  "Cagnes-sur-Mer",
+  "Cannes",
+  "La Colle-sur-Loup",
+  "Mougins",
+  "Nice",
+  "Opio",
+  "Saint-Laurent-du-Var",
+  "Vence",
+  "Et alentours",
 ];
 
 export default function ServiceArea() {
