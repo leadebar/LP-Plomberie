@@ -11,8 +11,8 @@ export default function Process() {
       <div className="container-x">
         <SectionHeading
           eyebrow="Comment ça se passe"
-          title="Une intervention simple, claire et sans surprise"
-          subtitle="Du premier appel au suivi après travaux, on vous accompagne à chaque étape."
+          title="Une intervention simple, rapide et sans mauvaise surprise"
+          subtitle="Du premier appel jusqu’à la fin des travaux, LP Plomberie vous accompagne avec sérieux, réactivité et un vrai souci du travail bien fait"
         />
 
         <motion.div
