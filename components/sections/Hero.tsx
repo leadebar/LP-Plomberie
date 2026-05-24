@@ -124,14 +124,7 @@ export default function Hero() {
                 </div>
               </motion.div>
             </div>
-
-            {/* Badge note flottant */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.9, duration: 0.5 }}
-              className="absolute -left-4 top-8 hidden rounded-2xl bg-white p-4 text-navy-900 shadow-card sm:block"
-            >
+            
       </div>
 
       {/* Vague de transition vers la section suivante */}
