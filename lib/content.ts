@@ -114,46 +114,25 @@ export type Testimonial = {
 
 export const testimonials: Testimonial[] = [
   {
-    name: "Sophie M.",
-    city: "Cagnes-sur-Mer",
+    name: "Léah B.",
+    city: "Le Cannet",
     rating: 5,
-    service: "Recherche de fuite",
-    text: "Fuite localisée en une demi-heure sans rien casser. Très professionnel, ponctuel et de bon conseil. Je recommande à 100 %.",
+    service: "Rénovation salle de bain",
+    text: "Salle de bain entièrement rénovée avec beaucoup de soin. Le résultat est moderne, propre et parfaitement réalisé. Délais respectés et chantier impeccable du début à la fin.",
   },
   {
-    name: "Karim B.",
-    city: "Nice",
+    name: "xx.",
+    city: "Antibes",
     rating: 5,
     service: "Dépannage urgent",
     text: "Intervention le jour même pour une fuite sous l'évier. Travail propre, prix honnête et explications claires. Parfait.",
   },
   {
-    name: "Christine D.",
-    city: "Saint-Laurent-du-Var",
+    name: "Christel B.",
+    city: "Mougins",
     rating: 5,
-    service: "Rénovation salle de bain",
-    text: "Rénovation complète de notre salle de bain. Le rendu est superbe, les délais respectés et le chantier laissé impeccable.",
-  },
-  {
-    name: "Julien R.",
-    city: "Villeneuve-Loubet",
-    rating: 5,
-    service: "Chauffe-eau",
-    text: "Remplacement de notre chauffe-eau rapidement après une panne. Conseils utiles sur le modèle, installation nickel.",
-  },
-  {
-    name: "Nadia L.",
-    city: "Antibes",
-    rating: 5,
-    service: "Débouchage",
-    text: "Canalisation débouchée efficacement. Réactif, sympathique et soigneux. Ça fait du bien d'avoir enfin un plombier de confiance.",
-  },
-  {
-    name: "Pascal G.",
-    city: "Cagnes-sur-Mer",
-    rating: 5,
-    service: "Installation sanitaire",
-    text: "Pose d'un nouveau lavabo et d'un WC suspendu. Travail méticuleux, finitions au top. Rien à redire.",
+    service: "Rénovation salle de bain & mezzanine",
+    text: "Rénovation complète de ma salle de bain et mezzanine. Le rendu est superbe, les délais respectés et le chantier laissé impeccable.",
   },
 ];
 
