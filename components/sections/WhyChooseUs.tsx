@@ -18,6 +18,7 @@ export default function WhyChooseUs() {
             <SectionHeading
               align="left"
               eyebrow="Pourquoi faire appel à LP Plomberie ?"
+              title=""
               subtitle="Un plombier de proximité pour des interventions rapides, soignées et adaptées à vos besoins."
             />
             <motion.div variants={fadeUp} {...revealOnScroll} className="mt-8">
