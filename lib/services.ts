@@ -21,7 +21,7 @@ export type Service = {
 };
 
 export const services: Service[] = [
- {
+{
     slug: "depannage-plomberie",
     title: "Dépannage plomberie",
     short: "Intervention rapide, 7j/7",
@@ -61,7 +61,7 @@ export const services: Service[] = [
     title: "Chauffe-eau",
     short: "Installation & dépannage",
     description:
-      "Remplacement, dépannage et installation de chauffe-eau électriques et thermodynamiques — conseils sur le choix du modèle adapté à votre logement.",
+      "Remplacement, dépannage et installation de chauffe-eau électriques et thermodynamiques — avec des conseils sur le choix du modèle adapté à votre logement.",
     icon: Flame,
     featured: true,
   },
@@ -70,7 +70,7 @@ export const services: Service[] = [
     title: "Rénovation de salle de bain",
     short: "Pilotage clé en main",
     description:
-      "Douche à l'italienne, baignoire, lavabo, robinetterie : on s'occupe de tout — plomberie, équipements et coordination des artisans partenaires pour un chantier sans stress.",
+      "Douche à l'italienne, baignoire, lavabo, robinetterie : plomberie et équipements pris en charge, finitions coordonnées avec des artisans partenaires sélectionnés.",
     icon: Bath,
     featured: true,
   },
