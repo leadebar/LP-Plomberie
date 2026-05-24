@@ -17,7 +17,7 @@ export default function Footer() {
             <img
               src="/logos/logo-blanc-rond.svg"
               alt="LP Plomberie"
-              className="h-12 w-auto"
+              className="h-20 w-auto"
             />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-navy-200/80">
               Plombier à Cagnes-sur-Mer, au service des particuliers et
