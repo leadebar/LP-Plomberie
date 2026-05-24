@@ -44,7 +44,7 @@ export default function QuoteForm() {
               dark
               eyebrow="Devis gratuit"
               title="Demandez votre devis"
-              subtitle="Décrivez votre besoin, on vous rappelle rapidement avec une estimation claire et sans engagement."
+              subtitle="Décrivez votre besoin, je vous rappelle rapidement avec une estimation claire et sans engagement."
             />
 
             <div className="mt-8 space-y-4">
