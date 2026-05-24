@@ -99,8 +99,8 @@ export default function Hero() {
               <div
                 className="aspect-[4/5] w-full rounded-[1.4rem] bg-cover bg-center sm:aspect-[4/4.4]"
                 style={{
-                  backgroundImage:
-                    "url('https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=900&q=75')",
+                backgroundImage:
+                "url('/hero.PNG')",
                 }}
               />
               {/* Carte flottante "intervention" */}
