@@ -35,14 +35,8 @@ export const reasons: Reason[] = [
   {
     title: "Intervention rapide",
     description:
-      "Un seul interlocuteur, une réactivité maximale. On se déplace vite pour limiter les dégâts et vous dépanner sans attendre.",
+      "J’interviens rapidement pour vos urgences plomberie dans les Alpes-Maritimes.",
     icon: Clock,
-  },
-  {
-    title: "Artisan local de confiance",
-    description:
-      "Basé à Cagnes-sur-Mer, je connais le terrain et j'interviens dans tout le 06. Une relation directe, sans intermédiaire.",
-    icon: MapPin,
   },
   {
     title: "Devis gratuit & transparent",
@@ -53,20 +47,14 @@ export const reasons: Reason[] = [
   {
     title: "Travail soigné",
     description:
-      "Des finitions propres, un chantier laissé net et des installations durables. Le souci du détail sur chaque intervention.",
+      "Des réparations et installations réalisées avec sérieux et des matériaux de qualité.",
     icon: Sparkles,
   },
   {
-    title: "Accompagnement personnalisé",
+    title: "Un interlocuteur unique",
     description:
-      "On prend le temps de comprendre votre besoin et de vous conseiller la meilleure solution, adaptée à votre budget.",
+      "Un accompagnement simple et personnalisé du premier contact jusqu’à la fin des travaux.",
     icon: HeartHandshake,
-  },
-  {
-    title: "Sérieux & garanties",
-    description:
-      "Un artisan déclaré, ponctuel et fiable. Vous êtes accompagné avant, pendant et après l'intervention.",
-    icon: ShieldCheck,
   },
 ];
 
