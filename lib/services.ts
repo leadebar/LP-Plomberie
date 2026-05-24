@@ -74,38 +74,6 @@ export const services: Service[] = [
     icon: Bath,
     featured: true,
   },
-  {
-    slug: "installation-sanitaire",
-    title: "Installation sanitaire",
-    short: "Lavabo, douche, WC posés dans les règles",
-    description:
-      "Pose et raccordement de lavabos, douches, baignoires et WC. Installation conforme, étanche et durable.",
-    icon: ShowerHead,
-  },
-  {
-    slug: "reseaux-sanitaires",
-    title: "Installation de réseaux sanitaires",
-    short: "Réseaux d'alimentation et d'évacuation",
-    description:
-      "Création et mise en place de réseaux sanitaires complets pour le neuf comme pour la rénovation, en respectant les normes en vigueur.",
-    icon: Droplets,
-  },
-  {
-    slug: "transformation-reseaux",
-    title: "Pose & transformation de réseaux",
-    short: "Modification de votre plomberie existante",
-    description:
-      "Déplacement, modification ou extension de vos réseaux de plomberie pour accompagner vos projets d'aménagement.",
-    icon: Network,
-  },
-  {
-    slug: "salle-de-bain-pmr",
-    title: "Aménagement salle de bain PMR",
-    short: "Accessibilité et sécurité",
-    description:
-      "Adaptation de la salle de bain pour les personnes à mobilité réduite : douche de plain-pied, barres d'appui, accessibilité optimale.",
-    icon: Accessibility,
-  },
-];
+  ];
 
 export const featuredServices = services.filter((s) => s.featured);
