@@ -42,7 +42,7 @@ export default function Navbar() {
     >
       <nav className="container-x flex h-[72px] items-center justify-between">
         <Link
-          href="/"
+          href="/logo/logo-long"
           className="flex items-center gap-3"
           aria-label="LP Plomberie - accueil"
         >
