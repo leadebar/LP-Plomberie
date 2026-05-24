@@ -30,7 +30,7 @@ export default function Hero() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
                 </span>
-                Artisan plombier · Cagnes-sur-Mer & 06
+                Plombier · Cagnes-sur-Mer & 06
               </span>
             </motion.div>
 
@@ -38,11 +38,11 @@ export default function Hero() {
               variants={fadeUp}
               className="mt-6 font-display text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl"
             >
-              Votre plombier de confiance,{" "}
+              Votre plombier,{" "}
               <span className="bg-gradient-to-r from-navy-100 to-white bg-clip-text text-transparent">
                 rapide et soigné
               </span>{" "}
-              dans le 06.
+              à Cagnes-sur-Mer.
             </motion.h1>
 
             <motion.p
@@ -125,22 +125,7 @@ export default function Hero() {
               </motion.div>
             </div>
 
-            {/* Badge note flottant */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.9, duration: 0.5 }}
-              className="absolute -left-4 top-8 hidden rounded-2xl bg-white p-4 text-navy-900 shadow-card sm:block"
-            >
-              <div className="flex items-center gap-1 text-amber-400">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-current" />
-                ))}
-              </div>
-              <p className="mt-1 text-xs font-semibold">Clients satisfaits</p>
-              <p className="text-[11px] text-navy-500">Cagnes-sur-Mer & 06</p>
-            </motion.div>
-          </motion.div>
+        
         </div>
       </div>
 
