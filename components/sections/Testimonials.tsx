@@ -12,8 +12,8 @@ export default function Testimonials() {
       <div className="container-x">
         <SectionHeading
           eyebrow="Avis clients"
-          title="Ils nous ont fait confiance dans le 06"
-          subtitle="La satisfaction de nos clients est notre meilleure publicité. Voici ce qu'ils disent de LP Plomberie."
+          title="Ils ont fait confiance à LP Plomberie"
+          subtitle="Réactivité, travail soigné, conseils honnêtes et finitions propres : découvrez les retours des clients."
         />
 
         <motion.div
