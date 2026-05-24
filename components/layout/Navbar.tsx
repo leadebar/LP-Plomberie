@@ -48,7 +48,7 @@ export default function Navbar() {
         >
           <Logo variant="navy" withWordmark={false} className="h-10 w-auto" />
           <img
-          src="/logos/logo-bleu.svg"
+          src="/logos/logo-long.svg"
           alt="LP Plomberie"
           className="h-20 w-auto"
         />
