@@ -17,9 +17,8 @@ export default function WhyChooseUs() {
           <div className="lg:sticky lg:top-28">
             <SectionHeading
               align="left"
-              eyebrow="Pourquoi LP Plomberie"
-              title="Un artisan local sur qui vous pouvez vraiment compter"
-              subtitle="La fiabilité d'un professionnel sérieux, la proximité d'un artisan indépendant. Voici ce qui fait la différence."
+              eyebrow="Pourquoi faire appel à LP Plomberie ?"
+              subtitle="Un plombier de proximité pour des interventions rapides, soignées et adaptées à vos besoins."
             />
             <motion.div variants={fadeUp} {...revealOnScroll} className="mt-8">
               <Button href={telHref} variant="primary" size="lg">
