@@ -40,7 +40,6 @@ export default function Hero() {
             >
               Votre plombier{" "}
               <span className="bg-gradient-to-r from-navy-100 to-white bg-clip-text text-transparent">
-                rapide et soigné
               </span>{" "}
               à Cagnes-sur-Mer
             </motion.h1>
