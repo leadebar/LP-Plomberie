@@ -24,7 +24,7 @@ export default function WhyChooseUs() {
             <motion.div variants={fadeUp} {...revealOnScroll} className="mt-8">
               <Button href={telHref} variant="primary" size="lg">
                 <Phone className="h-5 w-5" />
-                Parler à un plombier
+                Contacter LP Plomberie
               </Button>
             </motion.div>
           </div>
