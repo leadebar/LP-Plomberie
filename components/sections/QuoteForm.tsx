@@ -43,7 +43,7 @@ export default function QuoteForm() {
               align="left"
               dark
               eyebrow="Devis gratuit"
-              title="Demandez votre devis gratuit en 1 minute"
+              title="Demandez votre devis"
               subtitle="Décrivez votre besoin, on vous rappelle rapidement avec une estimation claire et sans engagement."
             />
 
