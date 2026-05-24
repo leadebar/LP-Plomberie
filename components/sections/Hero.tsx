@@ -124,7 +124,30 @@ export default function Hero() {
                 </div>
               </motion.div>
             </div>
+{/* Badge note flottant */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.9, duration: 0.5 }}
+              className="absolute -left-4 top-8 hidden rounded-2xl bg-white p-4 text-navy-900 shadow-card sm:block"
+            >
+              <div className="flex items-center gap-1 text-amber-400">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-4 w-4 fill-current" />
+                ))}
+              </div>
+              <p className="mt-1 text-xs font-semibold">Clients satisfaits</p>
+              <p className="text-[11px] text-navy-500">Cagnes-sur-Mer & 06</p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </div>
 
+      {/* Vague de transition vers la section suivante */}
+      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
+    </section>
+  );
+}
         
         </div>
       </div>
