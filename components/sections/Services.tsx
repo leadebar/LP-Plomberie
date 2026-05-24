@@ -12,8 +12,8 @@ export default function Services() {
     <section id="services" className="relative bg-white py-20 lg:py-28">
       <div className="container-x">
         <SectionHeading
-          eyebrow="Nos prestations"
-          title="Des services de plomberie complets, du dépannage à la rénovation"
+          eyebrow="Services de plomberie"
+          title="Des interventions rapides et efficaces pour tous vos besoins en plomberie, dépannage et rénovation."
           subtitle="Que ce soit pour une urgence ou un projet, LP Plomberie prend en charge l'ensemble de vos besoins à Cagnes-sur-Mer et dans tout le 06."
         />
 
