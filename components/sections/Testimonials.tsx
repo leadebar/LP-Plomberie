@@ -50,9 +50,6 @@ export default function Testimonials() {
             </motion.figure>
           ))}
         </motion.div>
-        <p className="mt-8 text-center text-xs text-navy-400">
-          Témoignages d'illustration — à remplacer par vos avis Google authentiques.
-        </p>
       </div>
     </section>
   );
