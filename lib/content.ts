@@ -81,21 +81,21 @@ export const processSteps: Step[] = [
     number: "02",
     title: "Diagnostic & devis",
     description:
-      "Diagnostic précis sur place et devis gratuit, clair et détaillé avant toute intervention.",
+      "Un diagnostic précis est réalisé sur place afin de vous remettre un devis clair, détaillé et transparent avant toute intervention.",
     icon: ClipboardCheck,
   },
   {
     number: "03",
     title: "Intervention soignée",
     description:
-      "On réalise les travaux proprement, avec du matériel de qualité et le souci des finitions.",
+      "Les travaux sont réalisés avec soin, dans le respect des délais, avec des matériaux de qualité et des finitions propres et durables.",
     icon: Hammer,
   },
   {
     number: "04",
     title: "Vérification & suivi",
     description:
-      "On contrôle l'installation avec vous et on reste disponible si besoin. Votre satisfaction d'abord.",
+      "Chaque installation est vérifiée avec vous après l’intervention afin de garantir un résultat fiable et votre entière satisfaction.",
     icon: ThumbsUp,
   },
 ];
