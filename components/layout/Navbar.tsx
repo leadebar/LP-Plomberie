@@ -47,14 +47,11 @@ export default function Navbar() {
           aria-label="LP Plomberie - accueil"
         >
           <Logo variant="navy" withWordmark={false} className="h-10 w-auto" />
-          <span className="flex flex-col leading-none">
-            <span className="font-display text-lg font-semibold text-navy-900">
-              LP Plomberie
-            </span>
-            <span className="text-[11px] font-medium uppercase tracking-[0.2em] text-navy-500">
-              Plombier · Cagnes-sur-Mer
-            </span>
-          </span>
+          <img
+          src="/logos/logo-bleu-long.svg"
+          alt="LP Plomberie"
+          className="h-12 w-auto"
+        />
         </Link>
 
         <ul className="hidden items-center gap-1 lg:flex">
