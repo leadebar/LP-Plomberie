@@ -21,8 +21,8 @@ export default function FAQ() {
       <div className="container-x">
         <SectionHeading
           eyebrow="Questions fréquentes"
-          title="Tout ce que vous devez savoir avant de nous appeler"
-          subtitle="Vous ne trouvez pas votre réponse ? Contactez-nous directement, on vous répond avec plaisir."
+          title="Une question avant de me contacter ?"
+          subtitle="Retrouvez ici les réponses aux questions les plus fréquentes sur les dépannages, fuites, chauffe-eaux et interventions plomberie."
         />
 
         <motion.div
