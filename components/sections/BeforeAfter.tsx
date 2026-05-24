@@ -96,9 +96,9 @@ export default function BeforeAfter() {
     <section id="realisations" className="bg-white py-20 lg:py-28">
       <div className="container-x">
         <SectionHeading
-          eyebrow="Nos réalisations"
-          title="Avant / après : le résultat parle de lui-même"
-          subtitle="Glissez le curseur pour découvrir la transformation. Des chantiers soignés, des finitions premium, partout dans le 06."
+          eyebrow="Réalisations"
+          title="Des rénovations qui transforment votre intérieur"
+          subtitle="Découvrez le savoir-faire LP Plomberie à travers des rénovations modernes, élégantes et parfaitement exécutées."
         />
         <motion.div
           variants={stagger}
@@ -109,9 +109,6 @@ export default function BeforeAfter() {
             <Comparator key={item.title} {...item} />
           ))}
         </motion.div>
-        <p className="mt-8 text-center text-xs text-navy-400">
-          Photos d'illustration — à remplacer par vos propres réalisations.
-        </p>
       </div>
     </section>
   );
