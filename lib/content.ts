@@ -150,27 +150,21 @@ export type BeforeAfterItem = {
 export const beforeAfter: BeforeAfterItem[] = [
   {
     title: "Rénovation salle de bain",
-    caption: "Cagnes-sur-Mer — rénovation complète",
-    before:
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=70",
-    after:
-      "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1200&q=70",
+    caption: "Mougins — rénovation complète",
+    before: "/avant1.JPG",
+    after: "/apres1.jpg",
   },
   {
-    title: "Remplacement chauffe-eau",
-    caption: "Nice — installation neuve",
-    before:
-      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1200&q=70",
-    after:
-      "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=1200&q=70",
+    title: "Rénovation salle de bain",
+    caption: "Le Cannet — rénovation complète",
+    before: "/avant2.jpg",
+    after: "/apres2.jpg",
   },
   {
-    title: "Douche à l'italienne",
-    caption: "Villeneuve-Loubet — aménagement",
-    before:
-      "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1200&q=70",
-    after:
-      "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=70",
+    title: "Rénovation salle de bain",
+    caption: "Nice — rénovation complète",
+    before: "/avant3.PNG",
+    after: "/apres3.jpg",
   },
 ];
 
