@@ -182,9 +182,9 @@ export type FaqItem = { question: string; answer: string };
 
 export const faqs: FaqItem[] = [
   {
-    question: "Intervenez-vous en urgence à Cagnes-sur-Mer ?",
+    question: "Intervenez-vous rapidement en cas d’urgence ?",
     answer:
-      "Oui. LP Plomberie se déplace rapidement à Cagnes-sur-Mer et dans tout le 06 pour les dépannages urgents : fuite, dégât des eaux, WC bouché ou panne de chauffe-eau. Appelez le 07 69 05 08 32 pour une intervention au plus vite.",
+      "Oui, selon votre localisation et la disponibilité du moment, une intervention rapide peut être proposée à Cagnes-sur-Mer et dans les environs. Appelez le 07 69 05 08 32 pour une intervention au plus vite.",
   },
   {
     question: "Le devis est-il gratuit ?",
@@ -192,14 +192,14 @@ export const faqs: FaqItem[] = [
       "Oui, tous nos devis sont gratuits et sans engagement. Vous recevez un détail clair des prestations et des tarifs avant toute intervention, sans mauvaise surprise.",
   },
   {
-    question: "Quelles sont vos zones d'intervention dans le 06 ?",
+    question: "Réalisez-vous les dépannages plomberie ?",
     answer:
-      "Basés à Cagnes-sur-Mer, nous intervenons dans l'ensemble des Alpes-Maritimes : Nice, Antibes, Saint-Laurent-du-Var, Villeneuve-Loubet, Vence, La Gaude, le Cros-de-Cagnes et les communes voisines.",
+      "Oui, dépannage de fuite d’eau, remplacement de robinetterie, débouchage, chauffe-eau, WC, évacuations et petits travaux de plomberie.",
   },
   {
-    question: "Comment se déroule une recherche de fuite ?",
+    question: "Intervenez-vous pour les canalisations bouchées ?",
     answer:
-      "Nous utilisons des méthodes de détection non destructives pour localiser précisément l'origine de la fuite avant toute réparation. Cela évite de casser inutilement et limite le coût des travaux.",
+      "Oui, débouchage d’évier, douche, baignoire, WC et canalisations.",
   },
   {
     question: "Pouvez-vous installer ou remplacer un chauffe-eau ?",
@@ -209,7 +209,7 @@ export const faqs: FaqItem[] = [
   {
     question: "Réalisez-vous des rénovations complètes de salle de bain ?",
     answer:
-      "Absolument. Nous prenons en charge la rénovation de salle de bain de A à Z : dépose, plomberie, pose des sanitaires et finitions, y compris les aménagements PMR pour les personnes à mobilité réduite.",
+      "Absolument. Nous prenons en charge la rénovation de salle de bain de A à Z : dépose, plomberie, pose des sanitaires et finitions.",
   },
   {
     question: "Quels sont vos horaires ?",
