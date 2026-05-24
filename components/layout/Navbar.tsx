@@ -59,8 +59,13 @@ export default function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="rounded-full px-3.5 py-2 text-sm font-medium text-navy-700 transition-colors hover:bg-navy-50 hover:text-navy-900"
-              >
+               className={cn(
+                  "rounded-full px-3.5 py-2 text-sm font-medium transition-all duration-300",
+                  scrolled
+                    ? "text-navy-700 hover:bg-navy-50 hover:text-navy-900"
+                    : "text-white hover:bg-white hover:text-navy-900"
+                )}
+                >
                 {link.label}
               </Link>
             </li>
@@ -70,8 +75,13 @@ export default function Navbar() {
         <div className="hidden items-center gap-3 lg:flex">
           <a
             href={telHref}
-            className="flex items-center gap-2 text-sm font-semibold text-navy-900 transition-colors hover:text-navy-600"
-          >
+className={cn(
+  "flex items-center gap-2 text-sm font-semibold transition-colors duration-300",
+  scrolled
+    ? "text-navy-900 hover:text-navy-600"
+    : "text-white hover:text-white/80"
+)}
+            >
             <Phone className="h-4 w-4" />
             {siteConfig.phone.display}
           </a>
