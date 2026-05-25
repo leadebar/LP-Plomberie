@@ -7,11 +7,10 @@ export type BlogPost = {
   slug: string;
   title: string;
   description: string;
-  date: string; // ISO
+  date: string;
   readingTime: string;
   category: string;
   cover: string;
-  /** Contenu en paragraphes. Les sous-titres commencent par "## ". */
   content: string[];
 };
 
@@ -83,7 +82,8 @@ export const posts: BlogPost[] = [
       "## Besoin d'un accompagnement ?",
       "LP Plomberie rénove des salles de bain clé en main à Cagnes-sur-Mer et dans tout le 06, y compris les aménagements PMR. Contactez-nous pour un devis gratuit et un accompagnement personnalisé.",
     ],
-    {
+  },
+  {
     slug: "prix-renovation-salle-de-bain-06",
     title: "Prix d'une rénovation salle de bain dans le 06 en 2026",
     description:
@@ -150,7 +150,6 @@ export const posts: BlogPost[] = [
       "## Notre recommandation",
       "Pour une résidence principale dans le 06, nous recommandons le chauffe-eau thermodynamique. LP Plomberie installe et entretient tous types de chauffe-eau à Cagnes-sur-Mer et dans tout le 06. Contactez-nous pour un conseil personnalisé et un devis gratuit.",
     ],
-  },
   },
 ];
 
