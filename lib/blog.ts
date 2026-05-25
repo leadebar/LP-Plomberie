@@ -83,6 +83,74 @@ export const posts: BlogPost[] = [
       "## Besoin d'un accompagnement ?",
       "LP Plomberie rénove des salles de bain clé en main à Cagnes-sur-Mer et dans tout le 06, y compris les aménagements PMR. Contactez-nous pour un devis gratuit et un accompagnement personnalisé.",
     ],
+    {
+    slug: "prix-renovation-salle-de-bain-06",
+    title: "Prix d'une rénovation salle de bain dans le 06 en 2026",
+    description:
+      "Combien coûte une rénovation de salle de bain dans les Alpes-Maritimes ? Budget, postes de dépense et conseils pour bien planifier votre projet.",
+    date: "2026-05-20",
+    readingTime: "6 min",
+    category: "Rénovation",
+    cover:
+      "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1600&q=70",
+    content: [
+      "La rénovation d'une salle de bain est l'un des projets les plus fréquents dans les logements des Alpes-Maritimes. Mais combien ça coûte vraiment ? Voici une grille de lecture honnête, basée sur notre expérience terrain à Cagnes-sur-Mer et dans tout le 06.",
+      "## Les fourchettes de prix selon le type de projet",
+      "Une rénovation légère (remplacement de la robinetterie, nouveau meuble vasque, peinture) se situe généralement entre 1 500 € et 3 500 €. Une rénovation complète avec dépose totale, nouvelle douche à l'italienne, sanitaires et faïence oscille entre 5 000 € et 12 000 € selon la surface et les équipements choisis.",
+      "## Les postes qui font varier le budget",
+      "Le poste plomberie représente en général 30 à 40 % du budget total. Les équipements sanitaires (douche, baignoire, lavabo, WC) comptent pour 20 à 30 %. Le carrelage et les finitions représentent le reste. Dans le 06, les coûts de main-d'œuvre sont légèrement supérieurs à la moyenne nationale, mais la qualité des artisans locaux est au rendez-vous.",
+      "## Douche à l'italienne : un investissement rentable",
+      "La douche à l'italienne est très demandée dans les Alpes-Maritimes. Son coût de pose se situe entre 800 € et 2 500 € selon la configuration. Elle valorise le bien et simplifie l'entretien au quotidien. C'est souvent le meilleur rapport qualité/valeur ajoutée d'une rénovation.",
+      "## Comment obtenir un devis fiable ?",
+      "Le meilleur moyen d'avoir un prix précis est de faire appel à un artisan qui visite le chantier. Chez LP Plomberie, nous réalisons des devis gratuits et détaillés à Cagnes-sur-Mer et dans tout le 06, avec un planning clair avant de démarrer les travaux.",
+    ],
+  },
+  {
+    slug: "debouchage-canalisation-conseils",
+    title: "Canalisation bouchée : causes, solutions et conseils de plombier",
+    description:
+      "Pourquoi les canalisations se bouchent-elles et comment y remédier ? Conseils d'un plombier professionnel à Cagnes-sur-Mer.",
+    date: "2026-05-10",
+    readingTime: "5 min",
+    category: "Conseils",
+    cover:
+      "https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=1600&q=70",
+    content: [
+      "Un évier qui se vide lentement, des gargouillis dans les tuyaux, une odeur nauséabonde : autant de signes qu'une canalisation est en train de se boucher. Voici les causes les plus fréquentes et les solutions adaptées.",
+      "## Les causes les plus fréquentes",
+      "Dans les salles de bain, l'accumulation de cheveux, de savon et de calcaire est la principale cause de bouchon. Dans la cuisine, ce sont les graisses et les résidus alimentaires. Dans les WC, les lingettes — même celles étiquetées 'flushable' — sont responsables de la majorité des bouchons graves.",
+      "## Ce que vous pouvez faire vous-même",
+      "Pour un bouchon léger, un déboucheur chimique ou une ventouse peuvent suffire. Évitez cependant les produits trop agressifs qui abîment les canalisations sur le long terme. Pour les bouchons récurrents ou profonds, l'intervention d'un professionnel est nécessaire.",
+      "## Les méthodes professionnelles",
+      "Le furet mécanique permet de casser et d'extraire les bouchons localisés. L'hydrocureur à haute pression est utilisé pour les canalisations plus importantes ou les bouchons tenaces. Ces équipements garantissent un résultat durable sans endommager vos tuyaux.",
+      "## Comment éviter les bouchons ?",
+      "Posez des filtres sur vos évacuations, ne versez jamais de graisse dans l'évier, et faites appel à un plombier pour un entretien préventif tous les deux à trois ans. LP Plomberie intervient à Cagnes-sur-Mer et dans tout le 06 pour tous vos débouchages, avec devis gratuit avant intervention.",
+    ],
+  },
+  {
+    slug: "choisir-chauffe-eau-alpes-maritimes",
+    title: "Quel chauffe-eau choisir dans les Alpes-Maritimes en 2026 ?",
+    description:
+      "Électrique, thermodynamique ou instantané : quel chauffe-eau est le plus adapté à votre logement dans le 06 ? Le guide complet d'un plombier local.",
+    date: "2026-04-28",
+    readingTime: "5 min",
+    category: "Conseils",
+    cover:
+      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1600&q=70",
+    content: [
+      "Choisir un chauffe-eau n'est pas anodin : c'est un équipement que vous garderez 10 à 15 ans. Dans les Alpes-Maritimes, quelques particularités locales influencent ce choix. Voici notre guide.",
+      "## Le chauffe-eau électrique classique",
+      "C'est la solution la plus répandue et la moins chère à l'achat (entre 200 € et 600 €). Simple à installer, il convient bien aux petits logements et aux résidences secondaires. Son point faible : la consommation électrique, surtout dans un département où les logements sont souvent bien occupés toute l'année.",
+      "## Le chauffe-eau thermodynamique : le meilleur choix en 2026",
+      "Il consomme 2 à 3 fois moins d'électricité qu'un cumulus classique en captant les calories de l'air ambiant. Dans le 06, le climat doux le rend particulièrement efficace toute l'année. Son coût est plus élevé (800 € à 2 000 €) mais des aides comme MaPrimeRénov' et les CEE peuvent financer une grande partie de l'installation.",
+      "## Le chauffe-eau instantané",
+      "Idéal pour les petits espaces ou les usages ponctuels, il chauffe l'eau à la demande sans stocker. Pratique pour une salle de bain secondaire ou un studio, mais moins adapté à une famille.",
+      "## L'impact du calcaire dans le 06",
+      "L'eau des Alpes-Maritimes est moyennement à fortement calcaire selon les secteurs. Cela accélère l'entartrage des résistances et réduit la durée de vie des appareils. Un adoucisseur ou des détartrages réguliers prolongent significativement la vie de votre chauffe-eau.",
+      "## Notre recommandation",
+      "Pour une résidence principale dans le 06, nous recommandons le chauffe-eau thermodynamique. LP Plomberie installe et entretient tous types de chauffe-eau à Cagnes-sur-Mer et dans tout le 06. Contactez-nous pour un conseil personnalisé et un devis gratuit.",
+    ],
+  },
   },
 ];
 
