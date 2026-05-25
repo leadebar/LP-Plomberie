@@ -10,9 +10,7 @@ export const siteConfig = {
   tagline: "Plombier de confiance à Cagnes-sur-Mer & dans tout le 06",
   description:
     "LP Plomberie, artisan plombier à Cagnes-sur-Mer. Dépannage rapide, recherche de fuite, débouchage, chauffe-eau et rénovation de salle de bain dans tout le 06. Devis gratuit, intervention soignée.",
-  url:
-    process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
-    "https://www.lpplomberie.com",
+ url: "https://www.lpplomberie.com",
   locale: "fr_FR",
 
   // Coordonnées
