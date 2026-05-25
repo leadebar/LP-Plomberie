@@ -48,7 +48,13 @@ export default function Services() {
                 </p>
 
                 <Link
-                  href="/devis"
+                  href={
+                    service.slug === "debouchage-wc"
+                      ? "/wc-chasse-deau-cagnes-sur-mer"
+                      : service.slug === "recherche-de-fuite"
+                      ? "/recherche-fuite-cagnes-sur-mer"
+                      : `/${service.slug}-cagnes-sur-mer`
+                  }     
                   className="relative mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-navy-800 transition-colors group-hover:text-navy-600"
                 >
                   Demander un devis
