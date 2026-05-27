@@ -4,8 +4,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { X, MapPin, ArrowRight, Phone } from "lucide-react";
-import { projets } from "@/lib/projets";
-import type { Projet } from "@/lib/projets";
+import { projets } from "@/lib/projet";
+import type { Projet } from "@/lib/projet";
 import Button from "@/components/ui/Button";
 import UrgencyCTA from "@/components/sections/UrgencyCTA";
 import QuoteForm from "@/components/sections/QuoteForm";
@@ -192,7 +192,7 @@ export default function RealisationsPage() {
                     {selected.ville}
                   </p>
                 </div>
-                <Button href="/devis" variant="primary" size="sm">
+                <Button href="/devis" variant="primary" size="md">
                   Devis gratuit
                   <ArrowRight className="h-4 w-4" />
                 </Button>
