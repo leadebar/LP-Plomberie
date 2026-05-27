@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Fraunces } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/site";
-import { localBusinessSchema, websiteSchema, faqSchema } from "@/lib/schema";
+import { localBusinessSchema, websiteSchema } from "@/lib/schema";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FloatingActions from "@/components/layout/FloatingActions";
@@ -95,12 +95,6 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(websiteSchema()),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(faqSchema()),
           }}
         />
       </head>
