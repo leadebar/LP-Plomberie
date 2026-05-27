@@ -35,7 +35,7 @@ export const reasons: Reason[] = [
   {
     title: "Intervention rapide",
     description:
-      "J’interviens rapidement pour vos urgences plomberie dans les Alpes-Maritimes.",
+      "J'interviens rapidement pour vos urgences plomberie dans les Alpes-Maritimes.",
     icon: Clock,
   },
   {
@@ -53,7 +53,7 @@ export const reasons: Reason[] = [
   {
     title: "Un interlocuteur unique",
     description:
-      "Un accompagnement simple et personnalisé du premier contact jusqu’à la fin des travaux.",
+      "Un accompagnement simple et personnalisé du premier contact jusqu'à la fin des travaux.",
     icon: HeartHandshake,
   },
 ];
@@ -95,7 +95,7 @@ export const processSteps: Step[] = [
     number: "04",
     title: "Vérification & suivi",
     description:
-      "Chaque installation est vérifiée avec vous après l’intervention afin de garantir un résultat fiable et votre entière satisfaction.",
+      "Chaque installation est vérifiée avec vous après l'intervention afin de garantir un résultat fiable et votre entière satisfaction.",
     icon: ThumbsUp,
   },
 ];
@@ -176,7 +176,7 @@ export type FaqItem = { question: string; answer: string };
 
 export const faqs: FaqItem[] = [
   {
-    question: "Intervenez-vous rapidement en cas d’urgence ?",
+    question: "Intervenez-vous rapidement en cas d'urgence ?",
     answer:
       "Oui, selon votre localisation et la disponibilité du moment, une intervention rapide peut être proposée à Cagnes-sur-Mer et dans les environs. Appelez le 07 69 05 08 32 pour une intervention au plus vite.",
   },
@@ -188,12 +188,12 @@ export const faqs: FaqItem[] = [
   {
     question: "Réalisez-vous les dépannages plomberie ?",
     answer:
-      "Oui, dépannage de fuite d’eau, remplacement de robinetterie, débouchage, chauffe-eau, WC, évacuations et petits travaux de plomberie.",
+      "Oui, dépannage de fuite d'eau, remplacement de robinetterie, débouchage, chauffe-eau, WC, évacuations et petits travaux de plomberie.",
   },
   {
     question: "Intervenez-vous pour les canalisations bouchées ?",
     answer:
-      "Oui, débouchage d’évier, douche, baignoire, WC et canalisations.",
+      "Oui, nous intervenons pour le débouchage d'évier, douche, baignoire, WC et canalisations avec du matériel professionnel (furet, hydrocureur). Intervention rapide à Cagnes-sur-Mer et dans tout le 06.",
   },
   {
     question: "Pouvez-vous installer ou remplacer un chauffe-eau ?",
@@ -203,7 +203,7 @@ export const faqs: FaqItem[] = [
   {
     question: "Réalisez-vous des rénovations complètes de salle de bain ?",
     answer:
-      "Absolument. Nous prenons en charge la rénovation de salle de bain de A à Z : dépose, plomberie, pose des sanitaires et finitions.",
+      "Absolument. Nous prenons en charge la rénovation de salle de bain de A à Z : dépose des anciens équipements, plomberie, pose des sanitaires, douche à l'italienne, baignoire, robinetterie et finitions. Devis gratuit sur place.",
   },
   {
     question: "Quels sont vos horaires ?",
