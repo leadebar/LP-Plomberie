@@ -30,8 +30,11 @@ export default function MentionsLegalesPage() {
               Email : {siteConfig.email}
             </p>
             <p className="mt-2 text-navy-500">
-              [À compléter : SIRET, numéro de TVA, adresse de l'entreprise, nom du
-              responsable de publication.]
+              Éditeur : Léandre Pheulpin
+              SIRET : 98356648000015
+              Adresse : Cagnes-sur-mer, 06800
+              Responsable de publication : Léandre Pheulpin
+              TVA : non applicable (auto-entrepreneur)
             </p>
           </div>
 
