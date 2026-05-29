@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import QuoteForm from "@/components/sections/QuoteForm";
 import UrgencyCTA from "@/components/sections/UrgencyCTA";
@@ -31,7 +32,74 @@ export default function DevisPage() {
       </section>
 
       <QuoteForm />
+
+      {/* Section SEO */}
+      <section className="bg-white py-16">
+        <div className="container-x max-w-4xl">
+
+          <div className="mb-14">
+            <h2 className="font-display text-2xl font-semibold text-navy-950 sm:text-3xl">
+              Comment fonctionne notre devis gratuit ?
+            </h2>
+            <p className="mt-4 text-navy-700 leading-relaxed">
+              Remplissez le formulaire ci-dessus en décrivant votre projet ou votre problème : type de travaux, localisation, urgence éventuelle. {siteConfig.name} vous recontacte rapidement — souvent dans la journée — pour affiner votre besoin et vous transmettre une estimation claire et détaillée. Pour les interventions urgentes (fuite active, panne de chauffe-eau), appelez-nous directement.
+            </p>
+          </div>
+
+          <div className="mb-14">
+            <h2 className="font-display text-2xl font-semibold text-navy-950 sm:text-3xl">
+              Ce que comprend votre devis
+            </h2>
+            <ul className="mt-6 grid gap-4 sm:grid-cols-2">
+              {[
+                {
+                  title: "Gratuit et sans engagement",
+                  desc: "Aucune facturation pour l'établissement du devis, aucune obligation d'accepter.",
+                },
+                {
+                  title: "Déplacement inclus",
+                  desc: "La visite sur place pour évaluer les travaux est offerte dans notre zone d'intervention.",
+                },
+                {
+                  title: "Détail poste par poste",
+                  desc: "Main-d'œuvre, fournitures et délais : chaque ligne est expliquée clairement.",
+                },
+                {
+                  title: "Conseils personnalisés",
+                  desc: "On vous oriente vers la solution la plus adaptée à votre logement et votre budget.",
+                },
+              ].map(({ title, desc }) => (
+                <li key={title} className="rounded-xl border border-navy-100 p-5">
+                  <p className="font-semibold text-navy-950">{title}</p>
+                  <p className="mt-1 text-sm text-navy-600">{desc}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="mb-14">
+            <h2 className="font-display text-2xl font-semibold text-navy-950 sm:text-3xl">
+              Nos prestations à Cagnes-sur-Mer et dans le 06
+            </h2>
+            <p className="mt-4 text-navy-700 leading-relaxed">
+              LP Plomberie intervient pour tous vos travaux de plomberie : dépannage d&apos;urgence, recherche de fuite par méthode non destructive, débouchage de canalisation, installation et remplacement de chauffe-eau (électrique, thermodynamique, solaire), rénovation complète de salle de bain et aménagement PMR. Nous travaillons aussi bien pour des particuliers que pour des copropriétés et des professionnels.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="font-display text-2xl font-semibold text-navy-950 sm:text-3xl">
+              Zones d&apos;intervention
+            </h2>
+            <p className="mt-4 text-navy-700 leading-relaxed">
+              Basés à Cagnes-sur-Mer, nous intervenons dans tout le département des Alpes-Maritimes (06) : Nice, Antibes, Juan-les-Pins, Villeneuve-Loubet, Saint-Laurent-du-Var, Vence, La Colle-sur-Loup, Biot, Sophia Antipolis, Cannes et alentours. Vous n&apos;êtes pas sûr d&apos;être dans notre zone ? Contactez-nous, nous ferons le point ensemble.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
       <UrgencyCTA />
     </>
   );
+}
 }
