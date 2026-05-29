@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 import QuoteForm from "@/components/sections/QuoteForm";
 import UrgencyCTA from "@/components/sections/UrgencyCTA";
@@ -18,7 +17,7 @@ export default function DevisPage() {
       <section className="bg-navy-950 pb-6 pt-32 text-white lg:pt-40">
         <div className="container-x">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-navy-300">
-            Devis gratuit & sans engagement
+            Devis gratuit &amp; sans engagement
           </p>
           <h1 className="mt-3 max-w-3xl font-display text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
             Obtenez votre devis plomberie en quelques minutes
@@ -101,5 +100,4 @@ export default function DevisPage() {
       <UrgencyCTA />
     </>
   );
-}
 }
