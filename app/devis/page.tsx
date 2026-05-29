@@ -81,7 +81,7 @@ export default function DevisPage() {
               Nos prestations à Cagnes-sur-Mer et dans le 06
             </h2>
             <p className="mt-4 text-navy-700 leading-relaxed">
-              LP Plomberie intervient pour tous vos travaux de plomberie : dépannage d&apos;urgence, recherche de fuite par méthode non destructive, débouchage de canalisation, installation et remplacement de chauffe-eau (électrique, thermodynamique, solaire)et rénovation complète de salle de bain. Nous travaillons aussi bien pour des particuliers que pour des copropriétés et des professionnels.
+              LP Plomberie intervient pour tous vos travaux de plomberie : dépannage d&apos;urgence, recherche de fuite par méthode non destructive, débouchage de canalisation, installation et remplacement de chauffe-eau et rénovation complète de salle de bain. Nous travaillons aussi bien pour des particuliers que pour des copropriétés et des professionnels.
             </p>
           </div>
 
