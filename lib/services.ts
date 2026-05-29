@@ -1,8 +1,3 @@
-/**
- * Articles de blog SEO local (contenu rédactionnel inclus, prêt à publier).
- * Pour ajouter un article, dupliquez un objet dans le tableau `posts`.
- */
-
 export type BlogPost = {
   slug: string;
   title: string;
