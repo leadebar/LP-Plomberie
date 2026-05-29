@@ -53,7 +53,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "entretien-chauffe-eau-conseils",
-    title: "Entretenir son chauffe-eau : nos conseils pour le faire durer",
+    title: "Entretenir son chauffe-eau : 5 conseils essentiels",
     description:
       "Comment entretenir votre chauffe-eau pour prolonger sa durée de vie et éviter les pannes. Conseils d'un artisan plombier dans les Alpes-Maritimes.",
     date: "2026-02-04",
@@ -175,7 +175,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "debouchage-canalisation-conseils",
-    title: "Canalisation bouchée : causes, solutions et conseils de plombier",
+    title: "Canalisation bouchée : causes et solutions",
     description:
       "Pourquoi les canalisations se bouchent-elles et comment y remédier ? Conseils d'un plombier professionnel à Cagnes-sur-Mer.",
     date: "2026-05-10",
