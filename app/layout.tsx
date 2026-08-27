@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Fraunces } from "next/font/google";
+import { Inter, Zilla_Slab } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/site";
 import { localBusinessSchema, websiteSchema } from "@/lib/schema";
@@ -14,7 +14,8 @@ const inter = Inter({
   variable: "--font-inter",
   display: "swap",
 });
-const fraunces = Fraunces({
+
+const zillaSlab = Zilla_Slab({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
@@ -84,7 +85,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr" className={`${inter.variable} ${fraunces.variable}`}>
+    <html lang="fr" className={`${inter.variable} ${zillaSlab.variable}`}>
       <head>
         <script
           type="application/ld+json"
