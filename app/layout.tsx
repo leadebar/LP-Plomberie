@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Zilla_Slab } from "next/font/google";
+import { Inter, Merriweather } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/site";
 import { localBusinessSchema, websiteSchema } from "@/lib/schema";
@@ -15,11 +15,11 @@ const inter = Inter({
   display: "swap",
 });
 
-const zillaSlab = Zilla_Slab({
+const merriweather = Merriweather({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "700", "900"],
 });
 
 export const metadata: Metadata = {
@@ -85,7 +85,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr" className={`${inter.variable} ${zillaSlab.variable}`}>
+    <html lang="fr" className={`${inter.variable} ${merriweather.variable}`}>
       <head>
         <script
           type="application/ld+json"
