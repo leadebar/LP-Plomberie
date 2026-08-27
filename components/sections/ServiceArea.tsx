@@ -1,25 +1,25 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { MapPin, Phone, CheckCircle2 } from "lucide-react";
+import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import { telHref } from "@/lib/site";
 import { fadeUp, stagger, revealOnScroll } from "@/lib/animations";
 
 const cities = [
-  "Antibes",
-  "Biot",
-  "Cagnes-sur-Mer",
-  "Cannes",
-  "La Colle-sur-Loup",
-  "Le Rouret",
-  "Mougins",
-  "Nice",
-  "Opio",
-  "Saint-Laurent-du-Var",
-  "Vence",
-  "Et alentours",
+  { label: "Antibes", href: "/plombier-antibes" },
+  { label: "Biot", href: "/plombier-biot" },
+  { label: "Cagnes-sur-Mer", href: "/" },
+  { label: "Cannes", href: "/plombier-cannes" },
+  { label: "La Colle-sur-Loup", href: null },
+  { label: "Le Rouret", href: null },
+  { label: "Mougins", href: "/plombier-mougins" },
+  { label: "Nice", href: "/plombier-nice" },
+  { label: "Opio", href: "/plombier-opio" },
+  { label: "Saint-Laurent-du-Var", href: null },
+  { label: "Vence", href: "/plombier-vence" },
+  { label: "Et alentours", href: null },
 ];
 
 export default function ServiceArea() {
@@ -34,7 +34,6 @@ export default function ServiceArea() {
               title="Un plombier réactif proche de chez vous"
               subtitle="Basé à Cagnes-sur-Mer, j'interviens rapidement dans toutes les communes du 06."
             />
-
             <motion.ul
               variants={stagger}
               {...revealOnScroll}
@@ -42,16 +41,21 @@ export default function ServiceArea() {
             >
               {cities.map((city) => (
                 <motion.li
-                  key={city}
+                  key={city.label}
                   variants={fadeUp}
                   className="flex items-center gap-2 text-sm font-medium text-navy-700"
                 >
                   <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-500" />
-                  {city}
+                  {city.href ? (
+                    <Link href={city.href} className="hover:text-navy-900 hover:underline">
+                      {city.label}
+                    </Link>
+                  ) : (
+                    city.label
+                  )}
                 </motion.li>
               ))}
             </motion.ul>
-
             <motion.div variants={fadeUp} {...revealOnScroll} className="mt-9">
               <Button href={telHref} variant="primary" size="lg">
                 <Phone className="h-5 w-5" />
@@ -59,7 +63,6 @@ export default function ServiceArea() {
               </Button>
             </motion.div>
           </div>
-
           {/* Carte */}
           <motion.div
             variants={fadeUp}
