@@ -1,6 +1,8 @@
 import { siteConfig } from "@/lib/site";
 import { services } from "@/lib/services";
 import { faqs } from "@/lib/content";
+import type { ServicePage } from "@/lib/service-pages";
+import { withSite } from "@/lib/site";
 
 /**
  * Données structurées schema.org pour le SEO local.
@@ -17,9 +19,10 @@ export function localBusinessSchema() {
     url: siteConfig.url,
     telephone: siteConfig.phone.tel,
     email: siteConfig.email,
-    image: `${siteConfig.url}/logos/lp-plomberie-badge.svg`,
+    image: `${siteConfig.url}/opengraph-image`,
     logo: `${siteConfig.url}/logos/lp-plomberie-navy.svg`,
     priceRange: "€€",
+    sameAs: [siteConfig.socials.instagram],
     areaServed: {
       "@type": "GeoCircle",
       geoMidpoint: {
@@ -61,6 +64,18 @@ export function localBusinessSchema() {
         },
       })),
     },
+  };
+}
+
+export function serviceSchema(page: ServicePage) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: page.title,
+    description: withSite(page.metaDescription),
+    url: `${siteConfig.url}/${page.slug}`,
+    provider: { "@id": `${siteConfig.url}/#business` },
+    areaServed: { "@type": "City", name: siteConfig.city },
   };
 }
 

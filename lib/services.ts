@@ -1,4 +1,5 @@
 import type { LucideIcon } from "lucide-react";
+import { withSite } from "@/lib/site";
 import {
   Droplets,
   ShowerHead,
@@ -24,9 +25,11 @@ export const services: Service[] = [
   {
     slug: "depannage-plomberie",
     title: "Dépannage plomberie",
-    short: "Intervention rapide, 7j/7",
+    short: "Intervention rapide",
     description:
-      "Fuite, casse, dégât des eaux : intervention rapide à Cagnes-sur-Mer et dans tout le 06 pour diagnostiquer et réparer en une seule venue.",
+      withSite(
+      "Fuite, casse, dégât des eaux : intervention rapide à {city} et {zone} pour diagnostiquer et réparer en une seule venue."
+    ),
     icon: Wrench,
     featured: true,
   },
@@ -49,7 +52,7 @@ export const services: Service[] = [
     featured: true,
   },
   {
-    slug: "debouchage-wc",
+    slug: "wc-chasse-deau",
     title: "WC & chasse d'eau",
     short: "Réparation et débouchage",
     description:
@@ -75,5 +78,8 @@ export const services: Service[] = [
     featured: true,
   },
 ];
+
+/** Chemin d'une page de service : URL neutre, sans nom de ville */
+export const servicePath = (slug: string) => `/${slug}`;
 
 export const featuredServices = services.filter((s) => s.featured);

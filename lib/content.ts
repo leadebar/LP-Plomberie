@@ -1,4 +1,5 @@
 import type { LucideIcon } from "lucide-react";
+import { siteConfig, withSite } from "@/lib/site";
 import {
   Clock,
   ShieldCheck,
@@ -22,7 +23,7 @@ export const stats: Stat[] = [
   { value: "+500", label: "interventions réalisées" },
   { value: "6j/7", label: "de disponibilité" },
   { value: "100%", label: "devis gratuits" },
-  { value: "06", label: "tout le département couvert" },
+  { value: siteConfig.zoneShort, label: siteConfig.coverageLabel },
 ];
 
 export type Reason = {
@@ -35,7 +36,7 @@ export const reasons: Reason[] = [
   {
     title: "Intervention rapide",
     description:
-      "J'interviens rapidement pour vos urgences plomberie dans les Alpes-Maritimes.",
+      withSite("J'interviens rapidement pour vos urgences plomberie {zone}."),
     icon: Clock,
   },
   {
@@ -151,7 +152,7 @@ export const beforeAfter: BeforeAfterItem[] = [
   {
     title: "Rénovation salle de bain",
     caption: "Mougins — rénovation complète",
-    before: "/avant1.JPG",
+    before: "/avant1.jpg",
     after: "/apres1.jpg",
   },
   {
@@ -163,7 +164,7 @@ export const beforeAfter: BeforeAfterItem[] = [
   {
     title: "Rénovation salle de bain",
     caption: "Nice — rénovation complète",
-    before: "/avant3.PNG",
+    before: "/avant3.jpg",
     after: "/apres3.jpg",
   },
 ];
@@ -174,11 +175,11 @@ export const beforeAfter: BeforeAfterItem[] = [
 
 export type FaqItem = { question: string; answer: string };
 
-export const faqs: FaqItem[] = [
+const rawFaqs: FaqItem[] = [
   {
     question: "Intervenez-vous rapidement en cas d'urgence ?",
     answer:
-      "Oui, selon votre localisation et la disponibilité du moment, une intervention rapide peut être proposée à Cagnes-sur-Mer et dans les environs. Appelez le 07 69 05 08 32 pour une intervention au plus vite.",
+      "Oui, selon votre localisation et la disponibilité du moment, une intervention rapide peut être proposée à {city} et dans les environs. Appelez le {phone} pour une intervention au plus vite.",
   },
   {
     question: "Le devis est-il gratuit ?",
@@ -193,7 +194,7 @@ export const faqs: FaqItem[] = [
   {
     question: "Intervenez-vous pour les canalisations bouchées ?",
     answer:
-      "Oui, nous intervenons pour le débouchage d'évier, douche, baignoire, WC et canalisations avec du matériel professionnel (furet, hydrocureur). Intervention rapide à Cagnes-sur-Mer et dans tout le 06.",
+      "Oui, nous intervenons pour le débouchage d'évier, douche, baignoire, WC et canalisations avec du matériel professionnel (furet, hydrocureur). Intervention rapide à {city} et {zone}.",
   },
   {
     question: "Pouvez-vous installer ou remplacer un chauffe-eau ?",
@@ -211,3 +212,8 @@ export const faqs: FaqItem[] = [
       "Nous sommes disponibles du lundi au samedi, de 8h à 19h. Pour toute demande, contactez-nous par téléphone, WhatsApp ou via le formulaire de devis en ligne.",
   },
 ];
+
+export const faqs: FaqItem[] = rawFaqs.map((f) => ({
+  question: withSite(f.question),
+  answer: withSite(f.answer),
+}));

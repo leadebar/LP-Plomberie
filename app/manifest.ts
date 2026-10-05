@@ -3,7 +3,7 @@ import { siteConfig } from "@/lib/site";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: `${siteConfig.name} — Plombier Cagnes-sur-Mer & 06`,
+    name: `${siteConfig.name} — Plombier ${siteConfig.cityZone}`,
     short_name: siteConfig.name,
     description: siteConfig.description,
     start_url: "/",

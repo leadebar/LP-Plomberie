@@ -32,7 +32,7 @@ export default function MentionsLegalesPage() {
             <p className="mt-2 text-navy-500">
               Éditeur : Léandre Pheulpin
               SIRET : 98356648000015
-              Adresse : Cagnes-sur-mer, 06800
+              Adresse : {siteConfig.city}, {siteConfig.postalCode}
               Responsable de publication : Léandre Pheulpin
               TVA : non applicable (auto-entrepreneur)
             </p>

@@ -6,7 +6,6 @@ import { localBusinessSchema, websiteSchema } from "@/lib/schema";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FloatingActions from "@/components/layout/FloatingActions";
-import Loader from "@/components/ui/Loader";
 import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
@@ -19,45 +18,30 @@ const merriweather = Merriweather({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
-  weight: ["300", "400", "700", "900"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} — Plombier à Cagnes-sur-Mer & dans le 06`,
+    default: `${siteConfig.name} — ${siteConfig.headline}`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  keywords: [
-    "plombier Cagnes-sur-Mer",
-    "plombier Alpes-Maritimes",
-    "plombier 06",
-    "dépannage plomberie Cagnes-sur-Mer",
-    "recherche de fuite 06",
-    "débouchage canalisation Cagnes-sur-Mer",
-    "chauffe-eau Cagnes-sur-Mer",
-    "rénovation salle de bain 06",
-    "artisan plombier",
-    "plombier urgence Nice",
-  ],
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
     locale: siteConfig.locale,
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} — Plombier à Cagnes-sur-Mer & dans le 06`,
+    title: `${siteConfig.name} — ${siteConfig.headline}`,
     description: siteConfig.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} — Plombier à Cagnes-sur-Mer & dans le 06`,
+    title: `${siteConfig.name} — ${siteConfig.headline}`,
     description: siteConfig.description,
   },
   robots: {
@@ -101,7 +85,6 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans">
-        <Loader />
         <Navbar />
         <main>{children}</main>
         <Footer />

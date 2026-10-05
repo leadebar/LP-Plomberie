@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight, CalendarDays, Clock } from "lucide-react";
 import { posts } from "@/lib/blog";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Blog plomberie — conseils d'un plombier dans le 06",
-  description:
-    "Conseils, astuces et guides plomberie par LP Plomberie : fuite d'eau, entretien chauffe-eau, rénovation de salle de bain à Cagnes-sur-Mer et dans les Alpes-Maritimes.",
+  title: `Blog plomberie — conseils d'un plombier ${siteConfig.titleZone}`,
+  description: `Conseils, astuces et guides plomberie par LP Plomberie : fuite d'eau, entretien chauffe-eau, rénovation de salle de bain à ${siteConfig.city} et ${siteConfig.zone}.`,
   alternates: { canonical: "/blog" },
 };
 
@@ -45,10 +46,15 @@ export default function BlogPage() {
                 className="group flex flex-col overflow-hidden rounded-2xl border border-navy-100 bg-white card-hover"
               >
                 <Link href={`/blog/${post.slug}`} className="block">
-                  <div
-                    className="aspect-[16/10] w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                    style={{ backgroundImage: `url('${post.cover}')` }}
-                  />
+                  <div className="relative aspect-[16/10] w-full overflow-hidden">
+                    <Image
+                      src={post.cover}
+                      alt={post.title}
+                      fill
+                      sizes="(min-width: 1024px) 380px, (min-width: 768px) 45vw, 100vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
                 </Link>
                 <div className="flex flex-1 flex-col p-6">
                   <span className="inline-flex w-fit rounded-full bg-navy-50 px-3 py-1 text-xs font-semibold text-navy-700">

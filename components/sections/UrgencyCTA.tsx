@@ -29,7 +29,7 @@ export default function UrgencyCTA() {
               </h2>
               <p className="mt-3 text-navy-100/85">
                 Ne laissez pas la situation s'aggraver. Appelez LP Plomberie, votre
-                artisan à Cagnes-sur-Mer et dans tout le 06.
+                artisan à {siteConfig.city} et {siteConfig.zone}.
               </p>
             </div>
 

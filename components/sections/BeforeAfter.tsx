@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useCallback } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { beforeAfter } from "@/lib/content";
@@ -46,9 +47,13 @@ function Comparator({
         onTouchMove={(e) => update(e.touches[0].clientX)}
       >
         {/* Après (fond) */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url('${after}')` }}
+        <Image
+          src={after}
+          alt={`${title} : après`}
+          fill
+          sizes="(min-width: 1024px) 360px, (min-width: 768px) 45vw, 100vw"
+          className="object-cover"
+          draggable={false}
         />
         <span className="absolute right-3 top-3 rounded-full bg-navy-900/85 px-3 py-1 text-xs font-semibold text-white">
           Après
@@ -56,12 +61,18 @@ function Comparator({
 
         {/* Avant (recouvre selon le curseur) */}
         <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url('${before}')`,
-            clipPath: `inset(0 ${100 - pos}% 0 0)`,
-          }}
-        />
+          className="absolute inset-0"
+          style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}
+        >
+          <Image
+            src={before}
+            alt={`${title} : avant`}
+            fill
+            sizes="(min-width: 1024px) 360px, (min-width: 768px) 45vw, 100vw"
+            className="object-cover"
+            draggable={false}
+          />
+        </div>
         <span
           className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-navy-900"
           style={{ opacity: pos > 12 ? 1 : 0 }}

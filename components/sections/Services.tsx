@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { services } from "@/lib/services";
+import { services, servicePath } from "@/lib/services";
+import { siteConfig } from "@/lib/site";
 import { fadeUp, stagger, revealOnScroll } from "@/lib/animations";
 
 export default function Services() {
@@ -14,7 +15,7 @@ export default function Services() {
         <SectionHeading
           eyebrow="Services de plomberie"
           title="Des interventions rapides et efficaces pour tous vos besoins en plomberie, dépannage et rénovation."
-          subtitle="Que ce soit pour une urgence ou un projet, LP Plomberie prend en charge l'ensemble de vos besoins à Cagnes-sur-Mer et dans tout le 06."
+          subtitle={`Que ce soit pour une urgence ou un projet, LP Plomberie prend en charge l'ensemble de vos besoins à ${siteConfig.city} et ${siteConfig.zone}.`}
         />
 
         <motion.div
@@ -48,13 +49,7 @@ export default function Services() {
                 </p>
 
                 <Link
-                  href={
-                    service.slug === "debouchage-wc"
-                      ? "/wc-chasse-deau-cagnes-sur-mer"
-                      : service.slug === "recherche-de-fuite"
-                      ? "/recherche-fuite-cagnes-sur-mer"
-                      : `/${service.slug}-cagnes-sur-mer`
-                  }     
+                  href={servicePath(service.slug)}
                   className="relative mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-navy-800 transition-colors group-hover:text-navy-600"
                 >
                   Demander un devis
