@@ -152,7 +152,7 @@ export const beforeAfter: BeforeAfterItem[] = [
   {
     title: "Rénovation salle de bain",
     caption: "Mougins — rénovation complète",
-    before: "/avant1.JPG",
+    before: "/avant1.jpg",
     after: "/apres1.jpg",
   },
   {
@@ -164,7 +164,7 @@ export const beforeAfter: BeforeAfterItem[] = [
   {
     title: "Rénovation salle de bain",
     caption: "Nice — rénovation complète",
-    before: "/avant3.PNG",
+    before: "/avant3.jpg",
     after: "/apres3.jpg",
   },
 ];

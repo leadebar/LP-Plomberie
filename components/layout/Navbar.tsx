@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { Phone, Menu, X } from "lucide-react";
 import Button from "@/components/ui/Button";
@@ -45,13 +46,17 @@ export default function Navbar() {
           className="flex items-center"
           aria-label="LP Plomberie - accueil"
         >
-          <img
+          <Image
             src={
               scrolled
                 ? "/logos/logo-bleu-long.svg"
                 : "/logos/logo-blanc-long.svg"
             }
             alt="LP Plomberie"
+            width={500}
+            height={500}
+            priority
+            unoptimized
             className="h-20 w-auto object-contain transition-all duration-300"
           />
         </Link>

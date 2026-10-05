@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import Logo from "@/components/ui/Logo";
 import { services, servicePath } from "@/lib/services";
@@ -14,9 +15,12 @@ export default function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           {/* Marque */}
           <div>
-            <img
+            <Image
               src="/logos/logo-blanc-rond.svg"
               alt="LP Plomberie"
+              width={500}
+              height={500}
+              unoptimized
               className="h-24 w-auto"
             />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-navy-200/80">

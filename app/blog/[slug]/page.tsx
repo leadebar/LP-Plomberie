@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ArrowLeft, CalendarDays, Clock, Phone } from "lucide-react";
 import { posts, getPost } from "@/lib/blog";
@@ -54,6 +55,8 @@ export default function BlogPostPage({
     description: post.description,
     image: post.cover,
     datePublished: post.date,
+    dateModified: post.date,
+    mainEntityOfPage: `${siteConfig.url}/blog/${post.slug}`,
     author: { "@type": "Organization", name: siteConfig.name },
     publisher: { "@type": "Organization", name: siteConfig.name },
   };
@@ -103,10 +106,16 @@ export default function BlogPostPage({
 
       {/* Image de couverture */}
       <div className="container-x max-w-3xl">
-        <div
-          className="-mt-8 aspect-[16/9] w-full rounded-2xl border border-navy-100 bg-cover bg-center shadow-card"
-          style={{ backgroundImage: `url('${post.cover}')` }}
-        />
+        <div className="relative -mt-8 aspect-[16/9] w-full overflow-hidden rounded-2xl border border-navy-100 shadow-card">
+          <Image
+            src={post.cover}
+            alt={post.title}
+            fill
+            priority
+            sizes="(min-width: 768px) 768px, 100vw"
+            className="object-cover"
+          />
+        </div>
       </div>
 
       {/* Contenu */}

@@ -15,7 +15,10 @@ réécrire les pages. Tout ce qui dépend de la localisation vit dans `lib/site.
 3. **Blog** : relire les articles qui parlent du 06 (`lib/blog.ts`), notamment
    `prix-renovation-salle-de-bain-06` et `choisir-chauffe-eau-alpes-maritimes`.
    Les adapter à la nouvelle zone ou les retirer au moment de la bascule.
-4. **Réalisations et avis** : ils restent affichés (ce sont de vrais chantiers dans le 06).
+4. **Photos de chantiers** : la page `/realisation` n'affiche que les photos présentes
+   dans `public/projets/` (`projet-01.jpg` à `projet-09.jpg`, voir `lib/projets.ts`).
+   Tant qu'il n'y en a aucune, la page est en `noindex` et absente du sitemap.
+5. **Réalisations et avis** : ils restent affichés (ce sont de vrais chantiers dans le 06).
    Ajouter les premiers chantiers locaux dès qu'ils existent.
 
 ## Le jour J (fin janvier)

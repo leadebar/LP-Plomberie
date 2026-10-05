@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Phone, Star, ShieldCheck, Clock, ArrowRight } from "lucide-react";
 import Button from "@/components/ui/Button";
@@ -23,7 +24,7 @@ export default function Hero() {
       <div className="container-x relative">
         <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
           {/* Colonne texte */}
-          <motion.div variants={stagger} initial="hidden" animate="visible">
+          <motion.div variants={stagger} initial={false} animate="visible">
             <motion.h1
               variants={fadeUp}
               className="font-display text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl"
@@ -80,19 +81,20 @@ export default function Hero() {
 
           {/* Colonne carte visuelle */}
           <motion.div
-            initial={{ opacity: 0, y: 30, scale: 0.97 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98], delay: 0.2 }}
+            initial={false}
             className="relative"
           >
             <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-1.5 shadow-glow backdrop-blur">
-              <div
-                className="aspect-[4/5] w-full rounded-[1.4rem] bg-cover bg-center sm:aspect-[4/4.4]"
-                style={{
-                backgroundImage:
-                "url('/hero.PNG')",
-                }}
-              />
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[1.4rem] sm:aspect-[4/4.4]">
+                <Image
+                  src="/hero.jpg"
+                  alt="Plombier LP Plomberie en intervention"
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 480px, (min-width: 640px) 80vw, 100vw"
+                  className="object-cover object-center"
+                />
+              </div>
               {/* Carte flottante "intervention" */}
               <motion.div
                 initial={{ opacity: 0, y: 16 }}

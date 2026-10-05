@@ -6,7 +6,6 @@ import { localBusinessSchema, websiteSchema } from "@/lib/schema";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FloatingActions from "@/components/layout/FloatingActions";
-import Loader from "@/components/ui/Loader";
 import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
@@ -19,7 +18,7 @@ const merriweather = Merriweather({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
-  weight: ["300", "400", "700", "900"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -86,7 +85,6 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans">
-        <Loader />
         <Navbar />
         <main>{children}</main>
         <Footer />
