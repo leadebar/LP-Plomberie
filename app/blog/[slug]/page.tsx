@@ -131,7 +131,7 @@ export default function BlogPostPage({
         {/* CTA fin d'article */}
         <div className="mt-12 rounded-3xl border border-navy-100 bg-cream p-8 text-center">
           <h3 className="font-display text-2xl font-semibold text-navy-900">
-            Besoin d'un plombier à Cagnes-sur-Mer ou dans le 06 ?
+            Besoin d'un plombier à {siteConfig.city} ou {siteConfig.titleZone} ?
           </h3>
           <p className="mx-auto mt-2 max-w-md text-sm text-navy-600">
             {siteConfig.name} intervient rapidement. Appelez-nous ou demandez un

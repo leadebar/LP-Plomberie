@@ -4,23 +4,8 @@ import { MapPin, Phone, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
-import { telHref } from "@/lib/site";
+import { siteConfig, telHref } from "@/lib/site";
 import { fadeUp, stagger, revealOnScroll } from "@/lib/animations";
-
-const cities = [
-  { label: "Antibes", href: "/plombier-antibes" },
-  { label: "Biot", href: "/plombier-biot" },
-  { label: "Cagnes-sur-Mer", href: "/" },
-  { label: "Cannes", href: "/plombier-cannes" },
-  { label: "La Colle-sur-Loup", href: null },
-  { label: "Le Rouret", href: null },
-  { label: "Mougins", href: "/plombier-mougins" },
-  { label: "Nice", href: "/plombier-nice" },
-  { label: "Opio", href: "/plombier-opio" },
-  { label: "Saint-Laurent-du-Var", href: null },
-  { label: "Vence", href: "/plombier-vence" },
-  { label: "Et alentours", href: null },
-];
 
 export default function ServiceArea() {
   return (
@@ -32,14 +17,14 @@ export default function ServiceArea() {
               align="left"
               eyebrow="Zone d'intervention"
               title="Un plombier réactif proche de chez vous"
-              subtitle="Basé à Cagnes-sur-Mer, j'interviens rapidement dans toutes les communes du 06."
+              subtitle={siteConfig.serviceAreaSubtitle}
             />
             <motion.ul
               variants={stagger}
               {...revealOnScroll}
               className="mt-8 grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3"
             >
-              {cities.map((city) => (
+              {siteConfig.serviceCities.map((city) => (
                 <motion.li
                   key={city.label}
                   variants={fadeUp}
@@ -71,11 +56,11 @@ export default function ServiceArea() {
           >
             <div className="absolute left-5 top-5 z-10 flex items-center gap-2 rounded-full bg-navy-900 px-4 py-2 text-xs font-semibold text-white shadow-soft">
               <MapPin className="h-4 w-4" />
-              Cagnes-sur-Mer · 06
+              {siteConfig.city} · {siteConfig.zoneShort}
             </div>
             <iframe
-              title="Zone d'intervention LP Plomberie - Cagnes-sur-Mer et le 06"
-              src="https://www.google.com/maps?q=Cagnes-sur-Mer,France&z=11&output=embed"
+              title={`Zone d'intervention LP Plomberie - ${siteConfig.city} et ${siteConfig.zoneShort}`}
+              src={`https://www.google.com/maps?q=${encodeURIComponent(siteConfig.map.query)}&z=${siteConfig.map.zoom}&output=embed`}
               width="100%"
               height="420"
               style={{ border: 0 }}

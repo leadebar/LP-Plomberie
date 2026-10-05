@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, CalendarDays, Clock } from "lucide-react";
 import { posts } from "@/lib/blog";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Blog plomberie — conseils d'un plombier dans le 06",
-  description:
-    "Conseils, astuces et guides plomberie par LP Plomberie : fuite d'eau, entretien chauffe-eau, rénovation de salle de bain à Cagnes-sur-Mer et dans les Alpes-Maritimes.",
+  title: `Blog plomberie — conseils d'un plombier ${siteConfig.titleZone}`,
+  description: `Conseils, astuces et guides plomberie par LP Plomberie : fuite d'eau, entretien chauffe-eau, rénovation de salle de bain à ${siteConfig.city} et ${siteConfig.zone}.`,
   alternates: { canonical: "/blog" },
 };
 

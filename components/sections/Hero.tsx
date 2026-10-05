@@ -28,10 +28,10 @@ export default function Hero() {
               variants={fadeUp}
               className="font-display text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl"
             >
-              Votre plombier{" "}
+              Votre plombier à{" "}
               <span className="bg-gradient-to-r from-navy-100 to-white bg-clip-text text-transparent">
-              </span>{" "}
-              à Cagnes-sur-Mer
+                {siteConfig.city}
+              </span>
             </motion.h1>
 
             <motion.p
@@ -127,7 +127,7 @@ export default function Hero() {
                 ))}
               </div>
               <p className="mt-1 text-xs font-semibold">Clients satisfaits</p>
-              <p className="text-[11px] text-navy-500">Cagnes-sur-Mer & 06</p>
+              <p className="text-[11px] text-navy-500">{siteConfig.cityZone}</p>
             </motion.div>
           </motion.div>
         </div>

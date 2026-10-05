@@ -4,9 +4,9 @@ import UrgencyCTA from "@/components/sections/UrgencyCTA";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Devis gratuit plombier à Cagnes-sur-Mer & 06",
+  title: `Devis gratuit plombier à ${siteConfig.cityZone}`,
   description:
-    "Demandez votre devis gratuit à LP Plomberie : dépannage, recherche de fuite, débouchage, chauffe-eau, rénovation de salle de bain à Cagnes-sur-Mer et dans tout le 06.",
+    `Demandez votre devis gratuit à LP Plomberie : dépannage, recherche de fuite, débouchage, chauffe-eau, rénovation de salle de bain à ${siteConfig.city} ${siteConfig.zone}.`,
   alternates: { canonical: "/devis" },
 };
 
@@ -23,9 +23,8 @@ export default function DevisPage() {
             Obtenez votre devis plomberie en quelques minutes
           </h1>
           <p className="mt-4 max-w-2xl text-navy-100/85">
-            Décrivez votre besoin à {siteConfig.name}, artisan plombier à
-            Cagnes-sur-Mer. On vous répond rapidement avec une estimation claire,
-            partout dans le 06.
+            Décrivez votre besoin à {siteConfig.name}, artisan plombier à {siteConfig.city}. On vous répond rapidement avec
+            une estimation claire, partout {siteConfig.titleZone}.
           </p>
         </div>
       </section>
@@ -78,7 +77,7 @@ export default function DevisPage() {
 
           <div className="mb-14">
             <h2 className="font-display text-2xl font-semibold text-navy-950 sm:text-3xl">
-              Nos prestations à Cagnes-sur-Mer et dans le 06
+              Nos prestations à {siteConfig.city} et {siteConfig.titleZone}
             </h2>
             <p className="mt-4 text-navy-700 leading-relaxed">
               LP Plomberie intervient pour tous vos travaux de plomberie : dépannage d&apos;urgence, recherche de fuite par méthode non destructive, débouchage de canalisation, installation et remplacement de chauffe-eau et rénovation complète de salle de bain. Nous travaillons aussi bien pour des particuliers que pour des copropriétés et des professionnels.
@@ -90,7 +89,7 @@ export default function DevisPage() {
               Zones d&apos;intervention
             </h2>
             <p className="mt-4 text-navy-700 leading-relaxed">
-              Basés à Cagnes-sur-Mer, nous intervenons dans tout le département des Alpes-Maritimes (06) : Nice, Antibes, Juan-les-Pins, Villeneuve-Loubet, Saint-Laurent-du-Var, Vence, La Colle-sur-Loup, Biot, Sophia Antipolis, Cannes et alentours. Vous n&apos;êtes pas sûr d&apos;être dans notre zone ? Contactez-nous, nous ferons le point ensemble.
+              Basés à {siteConfig.city}, nous intervenons {siteConfig.zone} : {siteConfig.communesLong}. Vous n&apos;êtes pas sûr d&apos;être dans notre zone ? Contactez-nous, nous ferons le point ensemble.
             </p>
           </div>
 

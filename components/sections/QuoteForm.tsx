@@ -8,27 +8,54 @@ import { services } from "@/lib/services";
 import { siteConfig, telHref, whatsappHref } from "@/lib/site";
 import { fadeUp, revealOnScroll } from "@/lib/animations";
 
+type Status = "idle" | "sending" | "sent" | "mailto";
+
 export default function QuoteForm() {
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const form = e.currentTarget;
-    const data = new FormData(form);
-    const name = String(data.get("name") || "");
-    const phone = String(data.get("phone") || "");
-    const service = String(data.get("service") || "");
-    const message = String(data.get("message") || "");
+    const data = new FormData(e.currentTarget);
+    const payload = {
+      name: String(data.get("name") || ""),
+      phone: String(data.get("phone") || ""),
+      email: String(data.get("email") || ""),
+      service: String(data.get("service") || ""),
+      message: String(data.get("message") || ""),
+      // Champ piège anti-spam : un humain ne le remplit pas.
+      website: String(data.get("website") || ""),
+      page: window.location.pathname,
+    };
 
-    // Sans backend, on prépare un email pré-rempli (mailto).
-    // Pour un envoi automatisé, branchez ici un service (Formspree, Resend, API route…).
-    const subject = encodeURIComponent(`Demande de devis — ${service || "Plomberie"}`);
+    setStatus("sending");
+
+    // 1) Envoi direct par l'API (le plombier reçoit la demande par email).
+    try {
+      const res = await fetch("/api/devis", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (res.ok) {
+        setStatus("sent");
+        return;
+      }
+    } catch {
+      // réseau indisponible : on bascule sur l'email pré-rempli
+    }
+
+    // 2) Secours : email pré-rempli si l'API n'est pas configurée ou en erreur.
+    const subject = encodeURIComponent(
+      `Demande de devis — ${payload.service || "Plomberie"}`
+    );
     const body = encodeURIComponent(
-      `Nom : ${name}\nTéléphone : ${phone}\nService : ${service}\n\nMessage :\n${message}`
+      `Nom : ${payload.name}\nTéléphone : ${payload.phone}\nEmail : ${payload.email}\nService : ${payload.service}\n\nMessage :\n${payload.message}`
     );
     window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
-    setSent(true);
+    setStatus("mailto");
   }
+
+  const done = status === "sent" || status === "mailto";
 
   return (
     <section id="devis" className="relative overflow-hidden bg-navy-950 py-20 text-white lg:py-28">
@@ -88,15 +115,17 @@ export default function QuoteForm() {
 
           {/* Formulaire */}
           <motion.div variants={fadeUp} {...revealOnScroll}>
-            {sent ? (
+            {done ? (
               <div className="flex flex-col items-center justify-center rounded-3xl border border-white/10 bg-white p-10 text-center text-navy-900">
                 <CheckCircle2 className="h-14 w-14 text-emerald-500" />
                 <h3 className="mt-4 font-display text-2xl font-semibold">
                   Merci pour votre demande !
                 </h3>
                 <p className="mt-2 max-w-sm text-sm text-navy-600">
-                  Votre messagerie s'est ouverte avec votre demande pré-remplie.
-                  Sinon, appelez-nous directement au {siteConfig.phone.display}.
+                  {status === "sent"
+                    ? "Votre demande a bien été envoyée, je vous rappelle rapidement. Pour une urgence, appelez directement le "
+                    : "Votre messagerie s'est ouverte avec votre demande pré-remplie. Sinon, appelez directement le "}
+                  {siteConfig.phone.display}.
                 </p>
                 <a
                   href={telHref}
@@ -108,8 +137,17 @@ export default function QuoteForm() {
             ) : (
               <form
                 onSubmit={handleSubmit}
-                className="rounded-3xl border border-white/10 bg-white p-6 text-navy-900 shadow-glow sm:p-8"
+                className="relative overflow-hidden rounded-3xl border border-white/10 bg-white p-6 text-navy-900 shadow-glow sm:p-8"
               >
+                {/* Champ piège anti-spam, invisible pour les humains */}
+                <input
+                  type="text"
+                  name="website"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  className="absolute -left-[9999px] h-0 w-0 opacity-0"
+                />
                 <div className="grid gap-4 sm:grid-cols-2">
                   <Field label="Nom complet" htmlFor="name">
                     <input
@@ -171,10 +209,11 @@ export default function QuoteForm() {
 
                 <button
                   type="submit"
-                  className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-navy-900 py-4 text-base font-semibold text-white transition-all hover:bg-navy-800 active:scale-[0.99]"
+                  disabled={status === "sending"}
+                  className="mt-6 flex w-full disabled:opacity-60 items-center justify-center gap-2 rounded-full bg-navy-900 py-4 text-base font-semibold text-white transition-all hover:bg-navy-800 active:scale-[0.99]"
                 >
                   <Send className="h-5 w-5" />
-                  Envoyer ma demande de devis
+                  {status === "sending" ? "Envoi en cours…" : "Envoyer ma demande de devis"}
                 </button>
                 <p className="mt-3 text-center text-xs text-navy-400">
                   Réponse rapide · Sans engagement · Vos données restent confidentielles

@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { siteConfig } from "@/lib/site";
 
 export const runtime = "edge";
-export const alt = `${siteConfig.name} — Plombier à Cagnes-sur-Mer & dans le 06`;
+export const alt = `${siteConfig.name} — ${siteConfig.headline}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -31,7 +31,7 @@ export default function OgImage() {
             color: "#aeb7d8",
           }}
         >
-          Artisan plombier · Cagnes-sur-Mer & 06
+          Artisan plombier · {siteConfig.cityZone}
         </div>
         <div
           style={{
@@ -43,7 +43,7 @@ export default function OgImage() {
             maxWidth: 920,
           }}
         >
-          LP Plomberie — votre plombier de confiance dans le 06
+          LP Plomberie — votre plombier de confiance {siteConfig.titleZone}
         </div>
         <div
           style={{

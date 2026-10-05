@@ -99,15 +99,19 @@ Presque tout se règle depuis **`lib/site.ts`** : téléphone, email, horaires, 
 | Articles de blog | `lib/blog.ts` |
 | Couleurs / thème | `tailwind.config.ts` |
 
+### Zone géographique
+
+La ville, le département, les communes, la carte et les pages villes sont définis par
+**preset** dans `lib/site.ts` (`cagnes` par défaut, `bonneval` prêt). Le preset actif
+se choisit avec la variable `NEXT_PUBLIC_LOCATION`. Les pages de services ont des URLs
+neutres (`/chauffe-eau`, `/recherche-de-fuite`, ...) et leurs textes utilisent des
+jetons (`{city}`, `{zone}`, ...) : changer de zone ne demande aucune réécriture.
+Procédure complète : [`docs/DEMENAGEMENT-BONNEVAL.md`](docs/DEMENAGEMENT-BONNEVAL.md).
+
 ### Variables d'environnement
 
-Copiez `.env.example` en `.env.local` et renseignez l'URL finale :
-
-```
-NEXT_PUBLIC_SITE_URL=https://www.votre-domaine.fr
-```
-
-Cette URL alimente le SEO (canonical, sitemap, robots, Open Graph).
+Copiez `.env.example` en `.env.local`. Voir ce fichier pour `NEXT_PUBLIC_LOCATION` et
+les variables du formulaire de devis (`RESEND_API_KEY`, `DEVIS_TO_EMAIL`, `DEVIS_FROM_EMAIL`).
 
 ### Remplacer les photos et avis
 
@@ -115,10 +119,9 @@ Les photos avant/après et les témoignages sont des **exemples** (signalés sur
 
 ### Brancher le formulaire de devis
 
-Par défaut, le formulaire ouvre la messagerie du visiteur avec un email pré-rempli (aucun backend requis). Pour un envoi automatique, branchez un service dans `components/sections/QuoteForm.tsx` (fonction `handleSubmit`), par exemple :
-
-- **Formspree** / **Web3Forms** (sans serveur)
-- une **Route Handler** Next.js (`app/api/devis/route.ts`) + **Resend**
+Le formulaire envoie la demande à `app/api/devis/route.ts`, qui la transmet par email via **Resend**
+(variables `RESEND_API_KEY`, `DEVIS_TO_EMAIL`, `DEVIS_FROM_EMAIL`). Sans clé API, le formulaire retombe
+sur l'ouverture de la messagerie du visiteur avec un email pré-rempli.
 
 ---
 
@@ -175,7 +178,7 @@ Chaque `git push` sur `main` redéploie automatiquement le site.
 - **LP Plomberie** — Artisan indépendant
 - Téléphone : **07 69 05 08 32**
 - Email : **pheulpin.plomberie@gmail.com**
-- Zone : Cagnes-sur-Mer et l'ensemble du 06
+- Zone : définie dans `lib/site.ts` (Cagnes-sur-Mer et le 06 aujourd'hui, Bonneval après la bascule)
 - Horaires : du lundi au samedi, 8h – 19h
 
 ---
